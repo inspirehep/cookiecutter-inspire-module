@@ -1,0 +1,13 @@
+{
+    "project_name": "INSPIRE-Fun-Generator",
+    "project_shortname": "{{ cookiecutter.project_name | lower | replace(' ', '-') }}",
+    "package_name": "{{ cookiecutter.project_shortname | replace('-', '_') }}",
+    "github_repo": "inspirehep/{{ cookiecutter.project_shortname }}",
+    "description": "INSPIRE module that adds more fun to the platform.",
+    "author_name": "CERN",
+    "author_email": "admin@inspirehep.net",
+    "years": "2014-2017",
+    "copyright_holder": "{{ cookiecutter.author_name }}",
+    "copyright_by_intergovernmental": true,
+    "superproject": "INSPIRE"
+}
