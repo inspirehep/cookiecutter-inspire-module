@@ -42,10 +42,14 @@ for `INSPIRE`_. It is a simplified version of `the one provided by Invenio`_.
 Usage
 =====
 
-We first need to install Cookiecutter::
+We first need to install Cookiecutter:
+
+.. code-block:: console
 
     $ pip install cookiecutter
 
-then we can start using this repository as a template::
+then we can start using this repository as a template:
+
+.. code-block:: console
 
     $ cookiecutter https://github.com/inspirehep/cookiecutter-inspire-module
