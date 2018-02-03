@@ -22,15 +22,7 @@
 # or submit itself to any jurisdiction.
 {%- endif %}
 
-#
-# Tests
-#
+set -e
 
-[coverage:run]
-include = {{ cookiecutter.package_name }}/*.py
-
-[tool:pytest]
-addopts = --cov={{ cookiecutter.package_name }} --cov-report=term-missing:skip-covered
-
-[flake8]
-ignore = *.py E501 FI12 FI14 FI15 FI16 FI17 FI50 FI51 FI53
+flake8 {{ cookiecutter.package_name }} tests
+py.test tests

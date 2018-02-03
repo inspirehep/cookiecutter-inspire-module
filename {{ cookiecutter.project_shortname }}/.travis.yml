@@ -46,7 +46,7 @@ install:
   - travis_retry pip install -e .[tests]
 
 script:
-  - py.test {{ cookiecutter.package_name }} tests
+  - ./run-tests.sh
 
 after_success:
   - coveralls
