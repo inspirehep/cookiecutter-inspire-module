@@ -52,4 +52,5 @@ install:
   - pip install -e .[tests]
 
 script:
-  - py.test inspire_fun_generator tests
+  # See: https://github.com/pytest-dev/pytest/issues/812
+  - ./run-tests.sh; [ $? -eq 5 ]
