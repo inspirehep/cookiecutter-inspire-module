@@ -45,8 +45,8 @@ tests_require = [
     'flake8-future-import~=0.0,>=0.4.3',
     'flake8~=3.0,>=3.5.0',
     'mock~=2.0,>=2.0.0',
-    'pytest~=3.0,>=3.2.3',
     'pytest-cov~=2.0,>=2.5.1',
+    'pytest~=3.0,>=3.2.3',
 ]
 
 extras_require = {
