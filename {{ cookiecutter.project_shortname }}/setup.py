@@ -29,7 +29,7 @@ from __future__ import absolute_import, division, print_function
 from setuptools import find_packages, setup
 
 
-URL = 'https://github.com/{{ cookiecutter.github_repo }}'
+url = 'https://github.com/{{ cookiecutter.github_repo }}'
 
 readme = open('README.rst').read()
 
@@ -65,9 +65,9 @@ packages = find_packages(exclude=['docs'])
 setup(
     name='{{ cookiecutter.project_shortname }}',
     autosemver={
-        'bugtracker_url': URL + '/issues',
+        'bugtracker_url': url + '/issues',
     },
-    url=URL,
+    url=url,
     license='GPLv3',
     author='{{ cookiecutter.author_name }}',
     author_email='{{ cookiecutter.author_email }}',
