@@ -62,7 +62,7 @@ for name, reqs in extras_require.items():
     if name not in ['all', 'tests:python_version=="2.7"']:
         extras_require['all'].extend(reqs)
 
-packages = find_packages(exclude=['docs'])
+packages = find_packages(exclude=['docs', 'tests'])
 
 setup(
     name='{{ cookiecutter.project_shortname }}',
