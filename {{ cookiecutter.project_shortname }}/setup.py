@@ -59,7 +59,8 @@ extras_require = {
 
 extras_require['all'] = []
 for name, reqs in extras_require.items():
-    extras_require['all'].extend(reqs)
+    if name not in ['all', 'tests:python_version=="2.7"']:
+        extras_require['all'].extend(reqs)
 
 packages = find_packages(exclude=['docs'])
 
