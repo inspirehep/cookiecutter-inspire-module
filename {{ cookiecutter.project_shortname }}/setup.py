@@ -29,12 +29,12 @@ from __future__ import absolute_import, division, print_function
 from setuptools import find_packages, setup
 
 
-URL = 'https://github.com/{{ cookiecutter.github_repo }}'
+url = 'https://github.com/{{ cookiecutter.github_repo }}'
 
 readme = open('README.rst').read()
 
 setup_requires = [
-    'autosemver~=0.0,>=0.5.2',
+    'autosemver~=0.0,>=0.5.3',
 ]
 
 install_requires = []
@@ -42,10 +42,11 @@ install_requires = []
 docs_require = []
 
 tests_require = [
-    'flake8-future-import~=0.0,>=0.4.3',
+    'flake8-future-import~=0.0,>=0.4.4',
+    'flake8~=3.0,>=3.5.0',
     'mock~=2.0,>=2.0.0',
-    'pytest~=3.0,>=3.2.3',
     'pytest-cov~=2.0,>=2.5.1',
+    'pytest~=3.0,>=3.5.0',
 ]
 
 extras_require = {
@@ -58,16 +59,17 @@ extras_require = {
 
 extras_require['all'] = []
 for name, reqs in extras_require.items():
-    extras_require['all'].extend(reqs)
+    if name not in ['all', 'tests:python_version=="2.7"']:
+        extras_require['all'].extend(reqs)
 
-packages = find_packages(exclude=['docs'])
+packages = find_packages(exclude=['docs', 'tests'])
 
 setup(
     name='{{ cookiecutter.project_shortname }}',
     autosemver={
-        'bugtracker_url': URL + '/issues',
+        'bugtracker_url': url + '/issues',
     },
-    url=URL,
+    url=url,
     license='GPLv3',
     author='{{ cookiecutter.author_name }}',
     author_email='{{ cookiecutter.author_email }}',
