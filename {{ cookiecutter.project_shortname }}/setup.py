@@ -80,7 +80,7 @@ setup(
     description=__doc__,
     long_description=readme,
     setup_requires=setup_requires,
-    install_require=install_requires,
+    install_requires=install_requires,
     tests_require=tests_require,
     extras_require=extras_require,
     classifiers=[
